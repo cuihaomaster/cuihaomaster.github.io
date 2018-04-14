@@ -8,49 +8,32 @@
 	<link href="layui/css/layui.css" rel="stylesheet">
 	<script src="layui/layui.js"></script>
 	<style>
-	.layui-carousel img{max-width:100%};
-	
+	.layui-container img{max-width:100%};
 	</style>
 </head>
-<body>
-<div class="layui-carousel" id="test1">
-  <div carousel-item id="layer-photos-demo">
-    <div><img layer-pid="" layer-src="img/1.jpg" src="img/1.jpg" alt=""></div>
-    <div><img layer-pid="" layer-src="img/2.jpg" src="img/2.jpg" alt=""></div>
-    <div><img layer-pid="" layer-src="img/3.jpg" src="img/3.jpg" alt=""></div>
-    <div><img layer-pid="" layer-src="img/4.jpg" src="img/4.jpg" alt=""></div>
-  </div>
-</div>
-<script>
-layui.use('carousel', function(){
-  var carousel = layui.carousel;
-  //建造实例
-  carousel.render({
-    elem: '#test1'
-    ,width: '100%' //设置容器宽度
-    ,arrow: 'always' //始终显示箭头
-    //,anim: 'updown' //切换动画方式
-  });
-  
-});
-</script>
-<!-- <div class="layui-container">
-  <div class="layui-row">
-    <div id="layer-photos-demo" class="layer-photos-demo">
-	  <img layer-pid="图片id，可以不写" layer-src="img/1.jpg" src="img/1.jpg" alt="图片名">
-	  <img layer-pid="图片id，可以不写" layer-src="img/2.jpg" src="img/2.jpg" alt="图片名">
-	  <img layer-pid="图片id，可以不写" layer-src="img/3.jpg" src="img/3.jpg" alt="图片名">
-	  <img layer-pid="图片id，可以不写" layer-src="img/4.jpg" src="img/4.jpg" alt="图片名">
+<body style="background:#272625">
+<div class="layui-container">
+	<div class="layui-row" id="layer-photos-demo">
+		<div class="layui-col-xs6 layui-col-sm6 layui-col-md6">
+			<img layer-pid="" layer-src="img/1.jpg" src="img/1.jpg" alt="">
+		</div>
+		<div class="layui-col-xs6 layui-col-sm6 layui-col-md6">
+			<img layer-pid="" layer-src="img/2.jpg" src="img/2.jpg" alt="">
+		</div>
+		<div class="layui-col-xs6 layui-col-sm6 layui-col-md6">
+			<img layer-pid="" layer-src="img/3.jpg" src="img/3.jpg" alt="">
+		</div>
+		<div class="layui-col-xs6 layui-col-sm6 layui-col-md6">
+			<img layer-pid="" layer-src="img/4.jpg" src="img/4.jpg" alt="">
+		</div>
 	</div>
-  </div>
-</div>   -->    
-   
+</div>   
 <script>
 layui.use('layer', function(){
 
 layer.photos({
   photos: '#layer-photos-demo'
-  ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+  ,anim: 5 
 });  
 });    
   
